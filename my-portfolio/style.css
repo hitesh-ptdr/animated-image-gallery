@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(0, 0, 33);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding-top: 80px;
+  line-height: 1.6;
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgb(18, 18, 62);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav .left {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: rgb(170, 107, 228);
+  font-size: 1.05rem;
+}
+
+
+main hr {
+  border: 0;
+  background: #9c97f1;
+  height: 1.2px;
+  margin: 60px 84px;
+}
+
+
+.firstSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px 60px;
+}
+
+.firstSection > div {
+  width: 40%;
+}
+
+.leftSection h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.purple {
+  color: rgb(170, 107, 228);
+}
+
+#element {
+  font-size: 1.8rem;
+  color: rgb(170, 107, 228);
+  margin-top: 10px;
+  height: 30px;
+}
+
+.rightSection img {
+  width: 80%;
+  border-radius: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+.rightSection h4 {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+
+.aboutSection,
+.skillsSection,
+.projectsSection,
+.educationSection,
+.certificationsSection,
+.contactSection {
+  margin: 50px 80px;
+}
+
+.aboutSection h2,
+.skillsSection h2,
+.projectsSection h2,
+.educationSection h2,
+.certificationsSection h2,
+.contactSection h2 {
+  font-size: 2rem;
+  color: rgb(170, 107, 228);
+  margin-bottom: 15px;
+}
+
+.aboutSection p,
+.projectsSection p,
+.educationSection ul,
+.certificationsSection ul {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.educationSection ul,
+.certificationsSection ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.skillsContainer span {
+  background-color: rgb(36, 36, 87);
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+
+.projectCards {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.projectCard {
+  background-color: rgb(27, 27, 73);
+  padding: 20px;
+  border-radius: 12px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.projectCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgb(170, 107, 228);
+}
+
+.projectCard h3 {
+  margin-bottom: 8px;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 450px;
+  margin: 20px auto 0 auto;
+}
+
+form input,
+form textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+form textarea {
+  min-height: 100px;
+}
+
+form button {
+  background-color: rgb(170, 107, 228);
+  color: white;
+  padding: 12px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover,
+form button:focus {
+  background-color: rgb(140, 87, 186);
+}
+
+
+.socialLinks a {
+  color: rgb(170, 107, 228);
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.socialLinks a:hover {
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background-color: rgb(18, 18, 62);
+  margin-top: 60px;
+  font-size: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .firstSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .firstSection > div {
+    width: 90%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(18, 18, 62);
+    padding: 10px 0;
+  }
+
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+} */

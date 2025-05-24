@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #444;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  animation: slideUp 1s ease-in-out;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+  animation: zoomIn 1s ease-out;
+}
+
+.img-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  height: 250px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  animation: flipIn 1s ease-in-out;
+}
+
+.img-box:hover {
+  transform: rotateY(5deg) rotateX(5deg) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+  animation: fadeZoom 1.2s ease-in-out;
+}
+
+.img-box:hover img {
+  transform: scale(1.1) rotateZ(2deg);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: fadeSlide 1.2s ease-in-out;
+}
+
+.img-box:hover .overlay {
+  opacity: 1;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+  animation: fadeIn 0.5s ease;
+}
+
+.lightbox-img {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  animation: zoom 0.4s ease-in-out;
+}
+
+@keyframes zoom {
+  from { transform: scale(0.5) rotate(2deg); opacity: 0; }
+  to { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeZoom {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes flipIn {
+  from { transform: rotateY(90deg); opacity: 0; }
+  to { transform: rotateY(0); opacity: 1; }
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #f44336;
+}
+
+.caption {
+  text-align: center;
+  color: #ccc;
+  font-size: 18px;
+  padding: 10px 0;
+  animation: fadeIn 0.5s ease;
+}

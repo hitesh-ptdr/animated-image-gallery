@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Calculator</title>
+  <link rel="stylesheet" href="calcu.css" />
+</head>
+<body> 
+  <div class="container">
+    <h1 class="title">Smart Calculator 💻</h1>
+    
+    <label class="theme-switch">
+      <input type="checkbox" id="toggleTheme" />
+      <span class="slider"></span>
+    </label>
+
+    <div class="calculator">
+      <input type="text" class="display" id="display" readonly />  
+      <div class="buttons">
+        <button onclick="playSound();clearDisplay()">C</button>
+        <button onclick="playSound();deleteLast()">←</button>
+        <button onclick="playSound();appendValue('%')">%</button>
+        <button onclick="playSound();appendValue('/')">/</button>
+
+        <button onclick="playSound();appendValue('7')">7</button>
+        <button onclick="playSound();appendValue('8')">8</button>
+        <button onclick="playSound();appendValue('9')">9</button>
+        <button onclick="playSound();appendValue('*')">*</button>
+
+        <button onclick="playSound();appendValue('4')">4</button>
+        <button onclick="playSound();appendValue('5')">5</button>
+        <button onclick="playSound();appendValue('6')">6</button>
+        <button onclick="playSound();appendValue('-')">-</button>
+
+        <button onclick="playSound();appendValue('1')">1</button>
+        <button onclick="playSound();appendValue('2')">2</button>
+        <button onclick="playSound();appendValue('3')">3</button>
+        <button onclick="playSound();appendValue('+')">+</button>
+
+        <button onclick="playSound();appendValue('0')">0</button>
+        <button onclick="playSound();appendValue('.')">.</button>
+        <button class="equal" onclick="playSound();calculate()">=</button>
+      </div>
+    </div>
+  </div>
+
+  <audio id="clickSound" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
+
+  <script src="calcu.js"></script>
+</body>
+</html>
